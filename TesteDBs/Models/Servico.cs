@@ -16,14 +16,25 @@ namespace TesteDBs.Models
         public int IdServiço { get; set; }  
 
         /// <summary>
-        /// Nome do cliente
+        /// Nome do Serviço
         /// </summary>
         public string Nome { get; set; }
 
         /// <summary>
-        /// Morada do Cliente
+        /// Atributo boolean para verificar se se trata de uma testagem
         /// </summary>
-        public string Morada { get; set; }
+        public Boolean Testagem { get; set; }
+
+        /// <summary>
+        /// Atributo boolean para verificar se se trata de uma Desinfetação
+        /// </summary>
+        public Boolean Desinfetacao { get; set; }
+
+        /// <summary>
+        /// Atributo boolean para verificar se se trata de um Pacote
+        /// ou entao se for ambos automaticamente seleciona o pacote(undecided)
+        /// </summary>
+        public Boolean Pacote { get; set; }
 
         /// <summary>
         /// Numero de telefone do Cliente
