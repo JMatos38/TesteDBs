@@ -50,10 +50,8 @@ namespace TesteDBs.Models
         /// </summary>
         public string Empresa { get; set; }
 
-        [ForeignKey(nameof(Marcacao))]  // esta 'anotação' indica que o atributo 'RacaFK' está a executar o mesmo que o atributo 'Raca',
-                                        // e que representa uma FK para a classe Raca
-        public int marcacaoFK { get; set; }   // atributo para ser usado no SGBD e no C#. Representa a FK para a Raça do cão
-        public Marcacao IdMarcacao { get; set; }   // atributo para ser usado no C#. Representa a FK para a Raça do cão
-
+        [ForeignKey(nameof(Marcacao))]  
+        public int marcacaoFK { get; set; }  
+        public Marcacao IdMarcacao { get; set; }  
     }
 }

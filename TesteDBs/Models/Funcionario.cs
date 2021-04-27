@@ -17,7 +17,6 @@ namespace TesteDBs.Models
         /// <summary>
         /// Nome do Funcionario
         /// </summary>
-        [Required(ErrorMessage = "O Nome é de preenchimento obrigatório")]
 
         public string Nome { get; set; }
 
@@ -26,11 +25,15 @@ namespace TesteDBs.Models
         /// </summary>
 
         public string Morada { get; set; }
+        /// <summary>
+        /// Código postal da morada do funcionario
+        /// </summary>
+
+        public string CodigoPostal { get; set; }
 
         /// <summary>
         /// Numero de telemovel do Funcionario
         /// </summary>
-        [Display(Name = "Telemóvel")]
         public int Telemovel { get; set; }
 
 

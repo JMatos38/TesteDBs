@@ -19,8 +19,6 @@ namespace TesteDBs.Data
         public DbSet<Funcionario> Funcionario { get; set; }
         public DbSet<Servico> Servico { get; set; }
         public DbSet<Servico> ServicoFunc { get; set; }
-        // public DbSet<CriadoresCaes> CriadoresCaes { get; set; }
-
-
+        public DbSet<Fatura> Fatura { get; set; }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
-
+//iincompleto
 namespace TesteDBs.Models
 {
     public class Fatura
@@ -17,6 +18,7 @@ namespace TesteDBs.Models
         /// <summary>
         /// Nome referente à fatura
         /// </summary>
+        [RegularExpression("([A-ZÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑa-záàâãéèêíïóôõöúçñ '-]+)+", ErrorMessage = "O nome está incorreto.")]
         [Required(ErrorMessage = "O Nome é de preenchimento obrigatório")]
         public string Nome { get; set; }
 
@@ -31,15 +33,12 @@ namespace TesteDBs.Models
         /// </summary>
         public string Empresa { get; set; }
 
-        // ********************************************************
-
         /// <summary>
         /// FK para a Marcacao
         /// </summary>
-        [ForeignKey(nameof(Marcacao))]  // esta 'anotação' indica que o atributo 'RacaFK' está a executar o mesmo que o atributo 'Raca',
-                                        // e que representa uma FK para a classe Raca
-        public int marcacaoFK { get; set; }   // atributo para ser usado no SGBD e no C#. Representa a FK para a Raça do cão
-        public Marcacao IdMarcacao { get; set; }   // atributo para ser usado no C#. Representa a FK para a Raça do cão
+        [ForeignKey(nameof(Marcacao))]  
+        public int marcacaoFK { get; set; }   
+        public Marcacao IdMarcacao { get; set; }  
 
 
     }
