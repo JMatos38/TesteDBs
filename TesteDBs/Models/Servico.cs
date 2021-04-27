@@ -31,12 +31,6 @@ namespace TesteDBs.Models
         public Boolean Desinfetacao { get; set; }
 
         /// <summary>
-        /// Atributo boolean para verificar se se trata de um Pacote
-        /// ou entao se for ambos automaticamente seleciona o pacote(undecided)
-        /// </summary>
-        public Boolean Pacote { get; set; }
-
-        /// <summary>
         /// Numero de telefone do Cliente
         /// </summary>
         public int Telefone { get; set; }
