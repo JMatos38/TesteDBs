@@ -36,9 +36,9 @@ namespace TesteDBs.Models
         /// <summary>
         /// FK para a Marcacao
         /// </summary>
-        [ForeignKey(nameof(Marcacao))]  
+        [ForeignKey(nameof(Marcacoes))]  
         public int marcacaoFK { get; set; }   
-        public Marcacao IdMarcacao { get; set; }  
+        public Marcacoes IdMarcacao { get; set; }  
 
 
     }

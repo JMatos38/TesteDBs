@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TesteDBs.Models
 {
-    public class Marcacao
+    public class Marcacoes
     {
         /// <summary>
         /// Identificador de cada Marcação
@@ -36,24 +36,17 @@ namespace TesteDBs.Models
 
         public DateTime Data { get; set; }
 
-       // public string Nome { get; set; }
-
-        //public string Empresa { get; set; }
-
-
-        //[Display(Name = "Número de Contribuinte")]
-        //public int NIF { get; set; }
 
 
         //-------------------------------------------------------------------------------------
 
-        [ForeignKey(nameof(Clientes))]  
-        public int clientesFK { get; set; }   
-        public Clientes IdCliente { get; set; }  
+        [ForeignKey(nameof(Cliente))]  
+        public int ClientesFK { get; set; }   
+        public Clientes Cliente { get; set; }  
        
         [ForeignKey(nameof(Servico))]  
-        public int servicoFK { get; set; }   
-        public Servico IdServico { get; set; }  
+        public int ServicoFK { get; set; }   
+        public Servicos Servico { get; set; }  
 
     }
 }

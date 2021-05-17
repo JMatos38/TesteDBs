@@ -12,13 +12,13 @@ namespace TesteDBs.Models
         [Key]
         public int ID { get; set; }
         
-        [ForeignKey(nameof(Servico))] 
+        [ForeignKey(nameof(Servicos))] 
         public int servicoFK { get; set; }   
-        public Servico IdServico { get; set; }   
+        public Servicos IdServico { get; set; }   
 
-        [ForeignKey(nameof(Funcionario))]  
+        [ForeignKey(nameof(Funcionarios))]  
         public int FuncionarioFK { get; set; }   
-        public Funcionario IdFuncionario { get; set; }   
+        public Funcionarios IdFuncionario { get; set; }   
         
     }
 }

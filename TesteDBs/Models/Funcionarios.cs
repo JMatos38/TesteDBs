@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TesteDBs.Models
 {
-    public class Funcionario
+    public class Funcionarios
     {
         /// <summary>
         /// Identificador de cada Funcionario

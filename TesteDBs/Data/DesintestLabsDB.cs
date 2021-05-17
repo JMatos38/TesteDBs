@@ -15,10 +15,13 @@ namespace TesteDBs.Data
         }
         //Representar as Tabelas da BD
         public DbSet<Clientes> Clientes { get; set; }
-        public DbSet<Marcacao> Marcacao { get; set; }
-        public DbSet<Funcionario> Funcionario { get; set; }
-        public DbSet<Servico> Servico { get; set; }
-        public DbSet<Servico> ServicoFunc { get; set; }
+        public DbSet<Marcacoes> Marcacao { get; set; }
+        public DbSet<Funcionarios> Funcionario { get; set; }
+        public DbSet<Servicos> Servico { get; set; }
+        public DbSet<Servicos> ServicoFunc { get; set; }
         public DbSet<Fatura> Fatura { get; set; }
+        public DbSet<Testes> Testes { get; set; }
+        public DbSet<Desinfecao> Desinfecao { get; set; }
+
     }
 }

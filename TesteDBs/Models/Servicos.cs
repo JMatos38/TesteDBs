@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 // esta tabela ainda nao esta completa
 namespace TesteDBs.Models
 {
-    public class Servico
+    public class Servicos
     {
         /// <summary>
         /// Identificador de cada Serviço
         /// </summary>
         [Key]
-        public int IdServiço { get; set; }  
+        public int IdServico { get; set; }  
 
         /// <summary>
         /// Nome do Serviço
@@ -23,35 +23,36 @@ namespace TesteDBs.Models
         /// <summary>
         /// Atributo boolean para verificar se se trata de uma testagem
         /// </summary>
-        public Boolean Testagem { get; set; }
+       // public Boolean Testagem { get; set; }
 
         /// <summary>
         /// Atributo boolean para verificar se se trata de uma Desinfetação
         /// </summary>
-        public Boolean Desinfetacao { get; set; }
+        //public Boolean Desinfestacao { get; set; }
 
         /// <summary>
-        /// Numero de telefone do Cliente
+        /// Tipos de testes caso seja um serviço de testes de rastreio
         /// </summary>
-        public int Telefone { get; set; }
-
+       // public string Tipo_Testagem { get; set; }
         /// <summary>
-        /// NIF
+        /// Quantidades de testes encomendados caso seja um serviço de testes de rastreio
         /// </summary>
-        public int NIF { get; set; }
-
+        //public int Quantidade_testes { get; set; }
         /// <summary>
-        /// email do cliente 
+        /// Preçario para o serviço selecionado
         /// </summary>
-        public string email { get; set; }
-
+        public decimal Preco { get; set; }
         /// <summary>
-        /// Nome da empresa 
+        /// Descrição informativa sobre o serviço
         /// </summary>
-        public string Empresa { get; set; }
+        public string Descricao { get; set; }
+        /// <summary>
+        /// Em caso de ser uma desinfestação escolha da area de Desinfestaçao
+        /// </summary>
+        ///public string Area_Desinfest { get; set; }
 
         [ForeignKey(nameof(Marcacao))]  
-        public int marcacaoFK { get; set; }  
-        public Marcacao IdMarcacao { get; set; }  
+        public int MarcacaoFK { get; set; }  
+        public Marcacoes Marcacao { get; set; }  
     }
 }
